@@ -1,0 +1,59 @@
+/* AsideBar.css */
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    /* Hauteur totale de la fenêtre */
+   
+    max-width: 800px;
+    max-height: 800px;
+}
+
+
+
+.groups-container {
+    flex: 1; /* Prend tout l'espace disponible */
+    overflow-y: auto; /* Active le défilement vertical */
+    margin-bottom: 10px; /* Espace en bas pour le bouton de création */
+    border: 1px solid #ccc; /* Bordure pour délimiter la zone des groupes */
+    border-radius: 5px; /* Coins arrondis */
+    padding: 10px 20px; /* Espace interne */
+    max-height: 400px; /* Hauteur maximale pour le conteneur des groupes */
+}
+
+.group {
+    cursor: pointer; /* Changer le curseur pour indiquer que c'est cliquable */
+    margin: 5px 0; /* Espacement entre les groupes */
+    padding: 10px; /* Espace interne */
+    border-radius: 5px; /* Coins arrondis */
+    background-color: #f0f0f0; /* Couleur de fond des groupes */
+}
+
+.group:hover {
+    background-color: #e0e0e0; /* Couleur de fond lors du survol */
+}
+
+.error-message {
+    color: red; /* Couleur rouge pour les messages d'erreur */
+}
+
+/* AsideBar.css */
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Couleur de fond avec transparence */
+    display: flex;
+    justify-content: center; /* Centre horizontalement */
+    align-items: center; /* Centre verticalement */
+}
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 8px; /* Coins arrondis */
+    width: 400px; /* Largeur du modal */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Ajouter une ombre pour la profondeur */
+}

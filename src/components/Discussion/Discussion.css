@@ -1,0 +1,64 @@
+.discussion {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    max-width: 1000px;
+    max-height: 500px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.messages-container {
+    flex: 1;
+    overflow-y: auto;
+    max-height: 500px; /* Hauteur maximale pour le défilement */
+    padding: 10px;
+}
+
+.message-inputs {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.message {
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 8px;
+    position: relative;
+}
+
+.messageE {
+    background-color: #d1f7c4; /* Couleur pour le message de l'utilisateur connecté */
+    align-self: flex-end; /* Aligne à droite */
+}
+
+.messageR {
+    background-color: #e8e8e8; /* Couleur pour les messages des autres utilisateurs */
+    align-self: flex-start; /* Aligne à gauche */
+}
+
+.message strong {
+    display: block;
+    font-weight: bold;
+}
+
+.message span {
+    font-size: 0.8rem;
+    color: gray;
+    position: absolute;
+    bottom: 5px;
+    right: 10px;
+}
+
+.message a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.message a:hover {
+    text-decoration: underline;
+}

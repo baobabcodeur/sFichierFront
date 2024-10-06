@@ -1,0 +1,36 @@
+
+.entete {
+    margin: 10px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+}
+
+.entete button {
+    background-color: #3E4FA3;
+    color: #FFFFFF;
+}
+
+.entete img {
+    width: 50px;
+}
+.select {
+    display: flex;
+    border-bottom: 1px solid black;
+}
+.select h4 {
+   margin: 0;
+    padding: 5px;
+    border: 1px solid black;
+}
+.vert {
+    background-color: #4ADD85;
+}
+
+
+.contenu {
+    display: flex;
+   justify-content: space-around;
+ 
+}
+

@@ -1,0 +1,24 @@
+/* Invite.css */
+.invite {
+    padding: 10px; /* Espacement interne */
+}
+
+.listeM {
+    max-height: 300px; /* Hauteur maximale pour le conteneur de la liste */
+    overflow-y: auto; /* Active le défilement vertical */
+    border: 1px solid #ccc; /* Bordure pour délimiter la zone de la liste */
+    border-radius: 5px; /* Coins arrondis */
+    margin-top: 10px; /* Espace au-dessus de la liste */
+    padding: 10px; /* Espace interne */
+}
+
+.userItem {
+    display: flex; /* Utilisation de flexbox pour aligner le texte et le bouton */
+    justify-content: space-between; /* Espacement entre le nom et le bouton */
+    padding: 5px; /* Espacement interne pour chaque élément utilisateur */
+    cursor: pointer; /* Changer le curseur pour indiquer que c'est cliquable */
+}
+
+.userItem:hover {
+    background-color: #f0f0f0; /* Couleur de fond lors du survol */
+}

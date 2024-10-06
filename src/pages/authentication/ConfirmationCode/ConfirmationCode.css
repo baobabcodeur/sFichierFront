@@ -1,0 +1,48 @@
+
+
+
+.Appbar {
+    height: 50px;
+    width: 100vw;
+    background-color: #3E4FA3;
+    color: white;
+    display: flex;
+    align-items: center;
+  }
+  
+  .Appbar h1 {
+    margin: 0;
+  }
+  
+  footer {
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+  }
+  .container {
+    height: 78vh;
+    background-image: url("../../../assets/CaptureNew.PNG");
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+  }
+  
+  .container input {
+    width: 25vw;
+    height: 5vh;
+    margin: 10px;
+    border-radius: 15px;
+    /* border: none; */
+  }
+  .container button {
+    width: 25vw;
+    height: 5vh;
+    background-color: #4ADD85;
+  }
+  .container span {
+    color: #4ADD85;
+  }
+  
+  
