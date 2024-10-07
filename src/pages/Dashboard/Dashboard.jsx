@@ -10,7 +10,10 @@ import "./Dashboard.css";
 export default function Dashboard() {
     const navigate = useNavigate();
     const [selectedGroup, setSelectedGroup] = useState(null);
+    const [selectedInvite, setSelectedInvite] = useState(null);
     const [isAuthenticated, setIsAuthenticated] = useState(false); // État pour vérifier l'authentification
+    const [showAsideBar, setShowAsideBar] = useState(false); // Contrôler l'affichage de l'AsideBar sur mobile
+    const [showInvite, setShowInvite] = useState(false); // Contrôler l'affichage de l'Invite sur mobile
 
     // Vérifiez l'authentification à chaque chargement du composant
     useEffect(() => {
@@ -59,7 +62,7 @@ export default function Dashboard() {
     return (
         <div className='dashboard'>
             <div className="entete">
-                <img src="./public/securite.png" alt=""/>
+                <img src="./public/securite.png" alt="" />
                 <img src="./public/message.png" alt="" />
                 <img src="./public/rapelle.png" alt="" />
                 <Button
@@ -74,9 +77,33 @@ export default function Dashboard() {
                 <h4>Messages privés</h4>
             </div>
             <div className="contenu">
-                <AsideBar onSelectGroup={setSelectedGroup} />
+
+                {/* Boutons visibles sur mobile pour afficher AsideBar et Invite */}
+                <div className="mobile-buttons">
+                    <Button
+                        type="button"
+                        text={showAsideBar ? "Cacher Groupes" : "Afficher Groupes"}
+                        onClick={() => setShowAsideBar(!showAsideBar)}
+                    />
+                    <Button
+                        type="button"
+                        text={showInvite ? "Cacher Inviter" : "Afficher Inviter"}
+                        onClick={() => setShowInvite(!showInvite)}
+                    />
+                </div>
+
+                {/* AsideBar visible uniquement si showAsideBar est true (sur mobile) */}
+                <div className={`aside-bar ${showAsideBar ? "visible" : ""}`}>
+                    <AsideBar onSelectGroup={setSelectedGroup} />
+                </div>
+
                 <Discussion selectedGroup={selectedGroup} />
-                <Invite selectedGroup={selectedGroup} />
+
+                {/* Invite visible uniquement si showInvite est true (sur mobile) */}
+                <div className={`invite ${showInvite ? "visible" : ""}`}>
+                    <Invite selectedGroup={selectedGroup} />
+                </div>
+
             </div>
         </div>
     );

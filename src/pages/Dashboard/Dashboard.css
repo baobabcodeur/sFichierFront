@@ -34,3 +34,61 @@
  
 }
 
+/* Styles pour le tableau de bord */
+.dashboard {
+    display: flex;
+    flex-direction: column;
+}
+
+.entete {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.contenu {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+
+
+/* Les boutons de contrôle pour mobile */
+.mobile-buttons {
+    display: none;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+@media only screen and (max-width: 768px) {
+    /* Montrer les boutons sur mobile */
+    .mobile-buttons {
+        display: flex;
+        margin-bottom: 10px;
+    }
+
+    /* Montrer les composants quand ils sont activés sur mobile */
+    .aside-bar.visible,
+    .invite.visible {
+        display: block;
+        width: 100%;
+    }
+
+    .contenu {
+        flex-direction: column;
+        width: 100%;
+        gap: 5px;
+    }
+
+    .invite {
+        display: block; /* Ajouter cette ligne pour s'assurer que l'invite s'affiche correctement */
+        width: 100%;
+    }
+    /* Cacher AsideBar et Invite par défaut sur mobile */
+.aside-bar,
+.invite {
+    display: none;
+}
+}

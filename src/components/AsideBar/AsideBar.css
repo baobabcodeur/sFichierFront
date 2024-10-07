@@ -26,6 +26,7 @@
     padding: 10px; /* Espace interne */
     border-radius: 5px; /* Coins arrondis */
     background-color: #f0f0f0; /* Couleur de fond des groupes */
+    width: 300px;
 }
 
 .group:hover {
